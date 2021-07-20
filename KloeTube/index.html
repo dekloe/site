@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KloeTube</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0%;
+        }
+        iframe {
+            width: 100vw;
+            min-height: 80vh;
+            border: none;
+        }
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            width: 20vw;
+            height: 5vh;
+            font-size: 5vw;
+            margin-left: 40vw;
+            outline: none;
+        }
+        button:hover {
+            cursor: pointer;
+            opacity: 80%;
+        }
+        #homeBut {
+            height: 10vh;
+            opacity: 60%;
+        }
+        #homeBut:hover {
+            opacity: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a id="homeBut" href="/index.php"><img src="/img/logoRed.png" id="homeBut"></a>
+    <iframe id="iframe" src=""></iframe>
+    <button onclick="showVideo()">NEXT</button>
+    <script src="links.js"></script>
+    <script>
+        //const txt = ['https://www.youtube.com/embed/Lb4IcGF5iTQ,https://www.youtube.com/embed/Lb4IcGF5iTQ']
+        //const re = /\s*(?:,|$)\s*/
+        //const links = txt.split(re)
+
+        //const links = ["https://www.youtube.com/embed/FNQWlgl6PQU", "https://www.youtube.com/embed/Fnk1JE13XDQ?"];
+
+        function showVideo() {
+            let rand = Math.floor(Math.random() * links.length);
+            var iframe = document.getElementById('iframe');
+            iframe.src = links[rand];
+        }
+
+        showVideo();
+    </script>
+</body>
+</html>
