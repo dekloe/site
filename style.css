@@ -1,12 +1,12 @@
 * {
     font-family: arial;
-    color: black;
+    color: white;
     margin: 0%;
     animation-duration: 6s;
     animation-iteration-count: infinite;
 }
 body {
-    background-color: white;
+    background-color: black;
 }
 a {
     text-align: center;
